@@ -1,5 +1,6 @@
 ## 🚲 Adventure Works Cycles Financial Reporting Project
 Welcome to the Adventure Works Cycles Financial Reporting Project! This repository showcases my skills in data analysis, SQL, and Power BI by creating an insightful Profitability Analysis Report for Adventure Works Cycles.
+![Overview](Report/Overview.png)
 
 ## 📊 Project Overview
 Adventure Works Cycles, a leading manufacturer and retailer of bicycles and related accessories, aims to leverage data-driven insights to improve financial decision-making and operational efficiency. This project focuses on analyzing the company's profitability across different product lines.
