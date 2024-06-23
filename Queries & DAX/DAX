@@ -1,0 +1,43 @@
+DAX measure : 
+
+GrossProfitMarginN-1 = CALCULATE(AVERAGE(FactSales[GrossProfitMargin]),SAMEPERIODLASTYEAR(DimDate[Date])) 
+
+GrossProfitN-1 = CALCULATE(SUM(FactSales[GrossProfit]),SAMEPERIODLASTYEAR(DimDate[Date]))
+
+NetIncomeN-1 = CALCULATE(SUM(FactSales[NetIncome]),SAMEPERIODLASTYEAR(DimDate[Date]))
+
+
+NetProfitMarginN-1 = CALCULATE(AVERAGE(FactSales[NetProfitMargin]),SAMEPERIODLASTYEAR(DimDate[Date]))
+
+
+TotalSalesN-1 = CALCULATE(SUM(FactSales[TotalSales]),SAMEPERIODLASTYEAR(DimDate[Date]))
+
+% Variation COGS = 
+VAR __PREV_YEAR = CALCULATE(SUM('FactSales'[COGS]), DATEADD('DimDate'[Date], -1, YEAR))
+RETURN
+	DIVIDE(SUM('FactSales'[COGS]) - __PREV_YEAR, __PREV_YEAR)
+
+% Variation GrossProfit = 
+VAR __PREV_YEAR =
+	CALCULATE(
+		SUM('FactSales'[GrossProfit]),
+		DATEADD('DimDate'[Date], -1, YEAR)
+	)
+RETURN
+	DIVIDE(SUM('FactSales'[GrossProfit]) - __PREV_YEAR, __PREV_YEAR)
+
+Variation en pourcentage d'une année à l'autre de NetIncome = 
+VAR __PREV_YEAR = CALCULATE(SUM('FactSales'[NetIncome]), DATEADD('DimDate'[Date], -1, YEAR))
+RETURN
+	DIVIDE(SUM('FactSales'[NetIncome]) - __PREV_YEAR, __PREV_YEAR)
+
+Variation en pourcentage d'une année à l'autre de TotalSales = 
+VAR __PREV_YEAR = CALCULATE(SUM('FactSales'[TotalSales]), DATEADD('DimDate'[Date], -1, YEAR))
+RETURN
+	DIVIDE(SUM('FactSales'[TotalSales]) - __PREV_YEAR, __PREV_YEAR)
+
+
+
+
+
+
