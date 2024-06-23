@@ -31,13 +31,11 @@ Profitability Analysis Report:
 ### Other specifications
 - Users want to be able to compare the main KPI's over Last Year and Target
 - Data will be updated every year.
-- The report must be optimised for quick responds and an overall great user expererience.
+- The report must be optimized for quick responses and an overall great user experience.
 
 ## 🗂️ Repository Structure
 - Data/: Contains all raw data files.
-
 - Report/: Includes the Power BI report file and related documentation.
-
 - Queries & DAX/: SQL/DAX scripts for data integration and Calculations.
 
 ## ✨ Skills Demonstrated
