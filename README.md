@@ -34,13 +34,11 @@ Profitability Analysis Report:
 - The report must be optimised for quick responds and an overall great user expererience.
 
 ## 🗂️ Repository Structure
-- data/: Contains all raw data files and their descriptions.
+- Data/: Contains all raw data files.
 
-- reports/: Includes the Power BI report file and related documentation.
+- Report/: Includes the Power BI report file and related documentation.
 
-- scripts/: SQL scripts for data integration and calculations.
-
-- ReportingRequirements/: Includes analysis of the specifications
+- Queries & DAX/: SQL/DAX scripts for data integration and Calculations.
 
 ## ✨ Skills Demonstrated
 - Data Analysis: Leveraged SQL to extract and preprocess data for financial analysis.
